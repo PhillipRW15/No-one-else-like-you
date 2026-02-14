@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Magical Night Awaits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-container">
+        <!-- Background image will be set in CSS -->
+        <div class="overlay"></div>
+    </div>
+
+    <div class="content-container">
+        <section id="hero" class="section">
+            <h1 class="fade-in">Happy Valentine's Day</h1>
+            <p class="subtitle fade-in delay-5">My Beautiful Girl,</p>
+            <button id="start-btn" class="glow-on-hover fade-in delay-5" style="margin-top: 3rem;">Continue</button>
+        </section>
+
+        <section id="dear-amy" class="section hidden">
+            <h2 class="fade-in">Dear Amy</h2>
+            <div class="video-container fade-in delay-1">
+                <!-- Placeholder for user's MP4 -->
+                <video controls width="100%" class="styled-video">
+                    <source src="No one else like you.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <button id="continue-btn" class="glow-on-hover fade-in delay-2" style="margin-top: 2rem;">Continue</button>
+        </section>
+
+        <section id="hint" class="section hidden">
+            <div class="floating-notes">
+                <span class="note">&#9835;</span>
+                <span class="note">&#9833;</span>
+                <span class="note">&#9834;</span>
+            </div>
+            <p class="hint-text">Prepare for an evening of elegance and enchantment...</p>
+            <button id="reveal-btn" class="glow-on-hover">Reveal The Date</button>
+        </section>
+
+        <section id="reveal" class="section hidden">
+            <div class="card">
+                <h2>Candlelight Orchestra Concert</h2>
+                <div class="candle-container">
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <p class="details">Friday, February 28th</p>
+                <p class="details">8:30 PM</p>
+                <p class="message">I can't wait to share this magical night with you.</p>
+                <div class="music-controls" style="margin-top: 20px;">
+                    <button id="play-music-btn" class="small-btn"
+                        style="display:none; padding: 8px 16px; background: transparent; border: 1px solid #ffcc00; color: #ffcc00; cursor: pointer; border-radius: 4px;">&#9835;
+                        Play Music</button>
+                    <p id="music-error" style="color: #ff6b6b; font-size: 0.8rem; display: none; margin-top: 5px;">Music
+                        could not load.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Local audio file -->
+    <audio id="concert-music" src="claire_de_lune.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
